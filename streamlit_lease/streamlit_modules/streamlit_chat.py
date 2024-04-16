@@ -97,7 +97,7 @@ def initialize_session_state():
         if st.session_state.api_key_valid:
             llm = OpenAI(
                 temperature=0.4,
-                model_name="text-davinci-003"
+                model_name="gpt-3.5-turbo"
             )
             st.session_state.conversation = ConversationChain(
                 llm=llm,

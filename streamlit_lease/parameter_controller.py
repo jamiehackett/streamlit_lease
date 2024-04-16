@@ -32,15 +32,9 @@ class ParameterController:
         self.register_parameter('displayed_max_response_tokens', int, 100, 'Maximum tokens for the chain response', min=1, max=16000)
         self.register_parameter('model_name', 
                                 str,
-                                "text-davinci-003", 
+                                "gpt-3.5-turbo", 
                                 "Model to be used in the qa_chain", 
                                 model_list=[
-                                    {
-                                        'name': 'text-davinci-003',
-                                        'description': '	Can do any language task with better quality, longer output, and consistent instruction-following than the curie, babbage, or ada models. Also supports some additional features such as inserting text.',
-                                        'max_tokens': 4097,
-                                        'training_data': 'Up to Sep 2021' 
-                                    },
                                     {
                                         'name': 'gpt-3.5-turbo',
                                         'description': 'Most capable GPT-3.5 model and optimized for chat at 1/10th the cost of text-davinci-003. Will be updated with our latest model iteration 2 weeks after it is released.',
@@ -94,8 +88,8 @@ class ParameterController:
 
         self.register_parameter('chatbot_llm', 
                                 'llm', 
-                                "text-davinci-003", 
-                                'Wrapped version of the text-davinci-003 model from OpenAI API', 
+                                "gpt-3.5-turbo", 
+                                'Wrapped version of the gpt-3.5-turbo model from OpenAI API', 
                                 temperature=0.4, 
                                 prompt=
                                     """
