@@ -86,7 +86,7 @@ def initialize_session_state():
         st.session_state.history = []
         # Append a welcoming message to the history.
         st.session_state.history = [Message("ai", 
-                                            "Hi there! I'm your AI assistant while using the app TalkWithYourFiles! \n  To start using the app, please authorize yourself using the sidebar on the left."
+                                            "Hi there! I'm a fairly useless AI Chat bot, that is demoing at the Dublin Tech meetup! Ask me a question! Also try the file reviewer on the other tab!"
                                             )
                                     ]
     if 'queued_messages' not in st.session_state:
